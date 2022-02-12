@@ -1,4 +1,5 @@
 # IntelliJ and VSCode config files for Web App
+**/.vscode
 .DS_Store
 .metadata/
 .recommenders/
