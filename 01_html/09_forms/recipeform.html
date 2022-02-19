@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <title>Dodaj nowy przepis</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Przykładowy formularz z przepisem kulinarnym">
+    </head>
+    <body>
+        <h1>Książka kucharska</h1>
+        <h2>Dodaj nowy przepis</h2>
+        <form>
+            <div>
+                <label for="recipeName">Nazwa przepisu</label>
+                <input type="text" id="recipeName" placeholder="np. Pierogi" required>
+            </div>
+            <div>
+                <label for="category">Kategoria</label>
+                <select id="category">
+                    <option option="breakfast">Śniadanie</option>
+                    <option option="dinner">Obiad</option>
+                    <option option="supper">Kolacja</option>
+                </select>
+            </div>
+            <div>
+                <label for="tag">Tag</label>
+                <input list="tags" id="tag">
+                <datalist id="tags">
+                    <option value="kurczak">
+                    <option value="vege">
+                    <option value="deser">
+                </datalist>
+            </div>
+            <div>
+                <p><label for="prep">Sposób przygotowania:</label></p>
+                <textarea id="prep" cols="30" rows="10"></textarea>
+            </div>
+            <button>Dodaj przepis</button>
+        </form>
+    </body>
+</html>
