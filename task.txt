@@ -1,4 +1,2 @@
 add code for 
-Listy
-Odnośniki
-Tabele
+CSS lessons

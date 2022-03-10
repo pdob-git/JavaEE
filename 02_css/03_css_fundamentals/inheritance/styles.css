@@ -1,0 +1,8 @@
+.ingredients {
+    color: red;
+    border: solid black;
+}
+
+h2 {
+    border: inherit;
+}

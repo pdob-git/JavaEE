@@ -1,0 +1,8 @@
+article > p:first-of-type {
+    font-style: italic;
+    color: gray;
+}
+
+li:nth-child(2n+1) {
+    background-color: lightgray;
+}

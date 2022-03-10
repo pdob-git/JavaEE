@@ -1,0 +1,31 @@
+/* [href^="#"] {
+    color: orange;
+}
+
+[class~="klas"] {
+    color: red;
+}
+
+[target="_blank"] {
+    color: red;
+} */
+
+[href] {
+    color: orange;
+}
+
+[target="_blank"] {
+    color: red;
+}
+
+[href^="#"] {
+    color: orange;
+}
+
+[href*="javastart.pl"] {
+    color: green;
+}
+
+[class |= "image" i] {
+    color: pink;
+}

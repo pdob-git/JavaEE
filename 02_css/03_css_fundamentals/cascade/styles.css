@@ -1,0 +1,14 @@
+/* specyficzność 100 */
+#ingredient-header {
+    color: red;
+}
+
+/* specyficzność 10 */
+.section-header {
+    color: green;
+}
+
+/* specyficzność 1 */
+h2 {
+    color: blue;
+}

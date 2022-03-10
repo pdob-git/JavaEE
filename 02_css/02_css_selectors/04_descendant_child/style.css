@@ -1,0 +1,7 @@
+section ul li {
+    color: orange;
+}
+
+article > p {
+    font-style: italic;
+}
