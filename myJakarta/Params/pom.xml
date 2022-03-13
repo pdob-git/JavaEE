@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.pdob</groupId>
-    <artifactId>HelloServlet</artifactId>
+    <artifactId>Params</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>helloservlet</name>
+    <name>params</name>
     <packaging>war</packaging>
 
     <properties>
@@ -29,7 +29,7 @@
 
     <build>
 
-        <finalName>helloservlet</finalName>
+        <finalName>params</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -47,7 +47,7 @@
                 <version>2.0</version>
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
-                    <path>/helloservlet</path>
+                    <path>/params</path>
                 </configuration>
             </plugin>
 

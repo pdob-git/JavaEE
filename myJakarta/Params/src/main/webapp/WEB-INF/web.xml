@@ -9,7 +9,7 @@
 <!--    </welcome-file-list>-->
 <!--    <servlet>-->
 <!--        <servlet-name>HelloCtrl</servlet-name>-->
-<!--        <servlet-class>pl.pdob.helloservlet.HelloController</servlet-class>-->
+<!--        <servlet-class>pl.pdob.params.HelloController</servlet-class>-->
 <!--    </servlet>-->
 
 <!--    <servlet-mapping>-->
