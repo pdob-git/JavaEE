@@ -1,4 +1,4 @@
-add code for: JS
+add code for: from JS to Servlet Forms Post
 
 code for CSS lessons added
 
