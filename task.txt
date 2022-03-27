@@ -1,6 +1,4 @@
-add code for: from JS to Servlet Forms Post
-
 code for CSS lessons added
-
+add additional infor for lessons starting from css
 
 
