@@ -3,3 +3,38 @@ Dodatkowe źródła
 Strona Jakarta Expression Language 3.0: https://jakarta.ee/specifications/expression-language/3.0/
 
 Obiekty niejawne w dokumentacji JSP: https://jakarta.ee/specifications/pages/3.0/server-pages-spec-3.0-RC2.html#implicit-objects
+
+
+Oprócz obiektu param istnieje także kilka innych obiektów niejawnych:
+
+    pageContext - obiekt reprezentujący klasę PageContext (kontekst danej strony) - pozwala odwołać się do innych obiektów niejawnych,
+    pageScope - mapa atrybutów zapisanych na poziomie strony,
+    requestScope - mapa atrybutów zapisanych na poziomie żądania,
+    sessionScope - mapa atrybutów zapisanych na poziomie sesji,
+    applicationScope - mapa atrybutów zapisanych na poziomie aplikacji,
+    param - mapa, która pozwala się odwołać do pierwszych wartości parametrów żądania GET lub POST,
+    paramValues - mapa wszystkich wartości dla danego parametru żądania GET lub POST w postaci tablicy,
+    header - mapa, która pozwala się odwołać do pierwszego wskazanego elementu nagłówka HTTP,
+    headerValues - mapa wszystkich wartości przesłanych w nagłówku HTTP dla danego jego elementu w postaci tablicy,
+    initParam - mapa, która umożliwia dostęp do parametrów inicjujących ,
+    cookie - mapa wszystkich ciasteczek.
+
+
+Operatory matematyczne i logiczne
+
+W ramach wyrażeń możemy nie tylko odwoływać się do obiektów niejawnych i ich atrybutów, ale także wykonywać proste operacje matematyczne, logiczne. Expression Language umożliwia zapis tego typu operacji przy pomocy operatorów w dwóch wersjach.
+Działanie 	Operator klasyczny 	Dodatkowy operator EL 	Przykład
+równosć 	"==" 	eq 	${2 == 2} lub ${2 eq 2}
+różny 	"!=" 	ne 	${2 != 2} lub ${2 ne 2}
+większy 	">" 	gt 	${2 > 2} lub ${2 gt 2}
+większy równy 	">=" 	ge 	${2 >= 2} lub ${2 ge 2}
+mniejszy 	"<" 	lt 	${2 < 2} lub ${2 lt 2}
+mniejszy równy 	"<=" 	le 	${2 >= 2} lub ${2 le 2}
+koniunkcja 	&& 	and 	${true && false} lub ${true and false}
+alternatywa 	|| 	or 	${true || false} lub ${true or false}
+negacja 	! 	not 	${!true} lub ${not true}
+null check 	brak 	empty 	${empty header['user-agent']}
+mnożenie 	* 	brak 	${2*2}
+dzielenie 	"/" 	brak 	${2/2}
+dodawanie 	"+" 	brak 	${2+2}
+odejmowanie 	"-" 	brak 	${2-2}

@@ -1,0 +1,68 @@
+Dodatkowe źródła
+
+Strona JSTL: https://projects.eclipse.org/projects/ee4j.jstl/releases/2.0.0
+
+Kod z tej lekcji: https://github.com/javastartpl/technologie-webowe/tree/master/el_jstl2
+
+
+
+Znaczniki standardowe
+
+W JSTL wyróżniamy pięć głównych grup znaczników:
+
+    podstawowe,
+    funkcyjne.
+    formatujące,
+    xml,
+    sql.
+
+W zdecydowanej większości używa się tylko znaczników podstawowych, rzadziej funkcyjnych i formatujących. Znaczniki xml i sql są w zasadzie nieużywane.
+
+W celu korzystania z dodatkowych znaczników na stronie JSP musisz umieścić najpierw dyrektywę taglib postaci:
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+file_copy
+
+Prefix może być dowolną literą lub ciągiem znaków, ale przyjęło się używać właśnie literkę c. Po dodaniu takiej dyrektywy możesz korzystać z następujących znaczników:
+Funkcja 	Tag
+Dodawanie atrybutu 	<c:set var="nazwa" value="wartosc">
+Usuwanie atrybutu 	<c:remove var="nazwa">
+Prosty warunek 	<c:if test="warunek">
+Warunek rozgałęziony (if/else, switch) 	<c:choose>
+    <c:when test="warunek">
+    <c:otherwise>
+Wyświetlenie wartości 	<c:out value="wartosc_lub_wyrazenieEL">
+Obsługa wyjątku i jego propagacja zamiast wyświetlenia strony błędu 	<c:catch>
+Budowanie adresu URL 	<c:url value="bazowyUrl">
+    <c:param name="nazwa" value="wartosc">
+Import zewnętrznego zasobu / fragmentu (include) 	<c:import var="zmienna" url="adres_zasobu">
+Przekierowanie 	<c:redirect url="docelowy_url">
+Iteracja po kolekcji (odpowiednik pętli for-each) 	<c:forEach var="zmienna" items="kolekcja">
+
+Przykładowy kod strony JSP, która wykorzystuje skryptlety wygląda tak:
+
+<%
+    if(request.getAttribute("person") != null) {
+%>
+    <h2>Cześć ${person.firstName}</h2>
+    <p style="color: ${person.age gt 18 ? 'green' : 'red'}">
+        ${person.age gt 18 ? 'Jesteś pełnoletni' : 'Jesteś nieletni'}
+    </p>
+    <p>Informacje o Twojej przeglądarce: ${header['user-agent']}</p>
+<%
+    }
+%>
+file_copy
+
+a po przerobieniu na wersję z JSTL będzie to coś takiego:
+
+<c:if test="${requestScope.person != null}">
+    <h2>Cześć ${person.firstName}</h2>
+    <p style="color: ${person.age gt 18 ? 'green' : 'red'}">
+            ${person.age gt 18 ? 'Jesteś pełnoletni' : 'Jesteś nieletni'}
+    </p>
+    <p>Informacje o Twojej przeglądarce: ${header['user-agent']}</p>
+</c:if>
+file_copy
+
+mam nadzieję, że widzisz różnicę w czytelności. Jeżeli dodamy do tego zastąpienie innych instrukcji sterujących, jak np. pętle, to zysk będzie jeszcze większy.
