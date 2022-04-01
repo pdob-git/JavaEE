@@ -1,0 +1,13 @@
+text do imie:
+<script>alert("Zostałeś zhackowany!")</script>
+
+text do nazwisko:
+<script>alert("Przelej 1000zł na konto 1111 2222 3333 4444 5555, albo wszyscy dowiedzą się co zrobiłeś! Masz 10 minut. Czas start.")</script>
+
+Atak XSS to tylko jeden z wielu typów ataków na strony internetowe. Z lekcji tej zapamiętaj to, że zawsze gdy wyświetlasz jakieś treści przesłane przez formularz, to warto skorzystać ze znacznika <c:out> zamiast wyświetlać ten tekst korzystając bezpośrednio z wyrażenia EL.
+
+ 
+
+Dodatkowe źródła
+
+Kod z tej lekcji: https://github.com/javastartpl/technologie-webowe/tree/master/xss
