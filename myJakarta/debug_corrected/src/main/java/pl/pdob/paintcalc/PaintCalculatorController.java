@@ -13,7 +13,7 @@ public class PaintCalculatorController extends HttpServlet {
         Room room = getRoom(request);
         PaintDetails paintDetails = getPaintDetails(request);
         int paintAmount = PaintCalculator.calculatePaintAmount(room, paintDetails);
-        request.setAttribute("room", room);
+        request.setAttribute("paintArea", room.getPaintArea() / PaintCalculator.SQM_TO_SQCM);
         request.setAttribute("paintAmount", paintAmount);
         request.getRequestDispatcher("/result.jsp").forward(request, response);
     }

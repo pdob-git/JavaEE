@@ -24,8 +24,7 @@ function getConstructionElementsNumber() {
 
 function incrementCutElements() {
     let constructionElementsInput = document.getElementById("construction-elements");
-    let constructionElements = constructionElementsInput.value;
-    constructionElementsInput.value = constructionElements++;
+    constructionElementsInput.value++;
 }
 
 function addDoorOrWindowInput() {

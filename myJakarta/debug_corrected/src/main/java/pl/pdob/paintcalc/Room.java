@@ -16,7 +16,7 @@ class Room {
     }
 
     int getWallArea() {
-        return 2 * (width * height + length + height);
+        return 2 * (width * height + length * height);
     }
 
     int getConstructionElementsArea() {
