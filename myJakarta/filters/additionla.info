@@ -1,0 +1,18 @@
+W rzeczywistości możesz definiować dowolną liczbę filtrów dla tego samego URLa, ale jeżeli zależy Ci na tym, żeby jakiś filtr wykonał się wcześniej niż inny, to należy zamiast adnotacji @WebFilter wykorzystać do konfiguracji deskryptor wdrożenia. Kolejność w jakiej będą w niej wymienione filtry będzie miała wpływ na kolejność ich wywołania. Usuń lub zakomentuj adnotacje @WebFilter w obu filtrach. Zamiast tego skonfiguruj filtry w pliku web.xml.
+
+web.xml
+
+
+Przy tak skonfigurowanych filtrach, jeżeli ktoś w formularzu poda błędne hasło, to adres IP nie zostanie zalogowany w konsoli. Odwracając kolejność deklaracji elementów filter-mapping, filtr AuthenticationFilter zawsze będzie wykonywany jako pierwszy, nawet jeżeli hasło będzie nieprawidłowe.
+
+ 
+
+Dodatkowe źródła
+
+Dokumentacja adnotacji @WebFilter: https://jakarta.ee/specifications/platform/9/apidocs/index.html?jakarta/servlet/annotation/WebFilter.html
+
+Dokumentacja interfejsu Filter: https://jakarta.ee/specifications/platform/9/apidocs/index.html?jakarta/servlet/annotation/WebFilter.html
+
+Filtry w specyfikacji serwletów: https://jakarta.ee/specifications/servlet/5.0/servlet-spec-5.0-SNAPSHOT.html#filtering
+
+
