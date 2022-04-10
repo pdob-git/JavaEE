@@ -1,0 +1,52 @@
+
+* Data types
+Dodatkowe źródła
+
+Typy danych w dokumentacji MySQL https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+
+
+* Database creation
+
+Dodatkowe źródła
+
+Zapytanie CREATE DATABASE w dokumentacji MySQL: https://dev.mysql.com/doc/refman/8.0/en/create-database.html
+
+Zapytanie CREATE TABLE w dokumentacji MySQL: https://dev.mysql.com/doc/refman/8.0/en/creating-tables.html
+
+Zapytanie DROP TABLE w dokumentacji MySQL: https://dev.mysql.com/doc/refman/8.0/en/drop-table.html
+
+Zapytanie DROP DATABASE w dokumentacji MySQL: https://dev.mysql.com/doc/refman/8.0/en/drop-database.html
+
+Zapytania z tej lekcji: https://github.com/javastartpl/technologie-webowe/blob/master/sql/ddl/create_db_table.sql
+
+
+* Modify tables
+
+Dodatkowe źródła
+
+ALTER TABLE w dokumentacji MySQL: https://dev.mysql.com/doc/refman/8.0/en/alter-table.html
+
+Zapytania z tej lekcji: https://github.com/javastartpl/technologie-webowe/blob/master/sql/ddl/modify_db_table.sql 
+
+
+* SELECT
+
+Dodatkowe źródła
+
+SELECT w dokumentacji MySQL: https://dev.mysql.com/doc/refman/8.0/en/select.html
+
+
+* INSERT
+
+Dodatkowe źródła
+
+INSERT w dokumentacji MySQL: https://dev.mysql.com/doc/refman/8.0/en/insert.html
+
+* DELETE
+
+Dodatkowe źródła
+
+Instrukcja DELETE w dokumentacji MySQL: https://dev.mysql.com/doc/refman/8.0/en/delete.html
+
+
+
