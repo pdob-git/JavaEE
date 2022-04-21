@@ -1,0 +1,39 @@
+package pl.pdob.cp;
+
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+class RecipeDao {
+    private final DataSource dataSource;
+
+    public RecipeDao() {
+        try {
+            this.dataSource = DataSourceProvider.getDataSource();
+        } catch (NamingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    List<Recipe> findAll() {
+        final String sql = "SELECT id, title, description, ingredients, preptime FROM recipe";
+        List<Recipe> resultList = new ArrayList<>();
+        try(Connection connection = dataSource.getConnection();
+            Statement statement = connection.createStatement()){
+            ResultSet resultSet = statement.executeQuery(sql);
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String title = resultSet.getString("title");
+                String ingredients = resultSet.getString("ingredients");
+                String description = resultSet.getString("description");
+                int prepTime = resultSet.getInt("preptime");
+                resultList.add(new Recipe(id, title, description, ingredients, prepTime));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return resultList;
+    }
+}

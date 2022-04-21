@@ -1,4 +1,2 @@
 code for CSS lessons added
 add additional info for lessons starting from css
-add code for lesson application context
-add code for DataBase DAO
