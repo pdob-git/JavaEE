@@ -24,4 +24,4 @@ Dokumentacja klasy Statement: https://docs.oracle.com/en/java/javase/15/docs/api
 
 Dokumentacja klasy ResultSet: https://docs.oracle.com/en/java/javase/15/docs/api/java.sql/java/sql/ResultSet.html
 
-
+Kod z tej lekcji: https://github.com/javastartpl/technologie-webowe/tree/master/jdbc

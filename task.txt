@@ -1,2 +1,0 @@
-code for CSS lessons added
-add additional info for lessons starting from css
